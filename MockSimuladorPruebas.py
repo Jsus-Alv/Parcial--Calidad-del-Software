@@ -28,7 +28,6 @@ class MockAITestGenerator:
 requirements = [
     "El sistema debe permitir el inicio de sesión con credenciales válidas.",
     "El usuario debe poder restablecer su contraseña mediante correo electrónico.",
-    "El sistema debe registrar el historial de acceso de los usuarios."
 ]
 
 # Ejecución de la IA
@@ -40,7 +39,7 @@ print("\nCasos de prueba generados:")
 print(tabulate.tabulate(test_cases, headers="keys", tablefmt="grid"))
 
 # Deteccion de errores
-sample_code = "print(\"Hola Mundo\""
+sample_code = "print(\"Hola Mundo\"" # El codigo detectara este error y nos lo informara
 errors = mock_ai.detect_errors(sample_code)
 
 print("\nErrores detectados en el código:")
